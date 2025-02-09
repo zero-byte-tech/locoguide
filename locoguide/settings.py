@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# Custom apps
+INSTALLED_APPS += [
+    'geodata',
+]
+
 # 3rd party apps
 INSTALLED_APPS += [
     'rest_framework',
