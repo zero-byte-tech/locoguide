@@ -1,15 +1,9 @@
 from django.db import models
 from uuid import uuid4
-
+from locoguide.baseModel import BaseModel
 
 # BaseModel class
-class BaseModel(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
-    class Meta:
-        abstract = True
 
 # Country geo code model
 class Country(BaseModel):
@@ -69,7 +63,7 @@ class Ward(BaseModel):
 class Village(BaseModel):
     en_name = models.CharField(max_length=100)
     bn_name = models.CharField(max_length=100)
-    ward = models.ManyToManyField(Ward, on_delete=models.CASCADE)
+    ward = models.ManyToManyField(Ward)
 
     def __str__(self):
         return f"{self.en_name} - {self.bn_name}"

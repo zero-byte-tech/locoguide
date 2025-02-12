@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
 # Custom apps
 INSTALLED_APPS += [
-    'geodata',
+    'geo_data',
 ]
 
 # 3rd party apps
