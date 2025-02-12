@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+#app name
+INSTALLED_APPS+=[
+    "geo_data"
+]
 
 # Custom apps
 INSTALLED_APPS += [
