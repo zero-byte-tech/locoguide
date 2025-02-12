@@ -1,15 +1,8 @@
 from django.db import models
 from uuid import uuid4
-<<<<<<< HEAD
-from locoguide.baseModel import BaseModel
-
-# BaseModel class
-
-=======
 from locoguide.basemodel import BaseModel
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext as _
->>>>>>> 3a9effa062fd83652cbd8c3efdc1bdb373383faf
 
 # Country geo code model
 class Country(BaseModel):
@@ -108,14 +101,11 @@ class Ward(BaseModel):
 class Village(BaseModel):
     en_name = models.CharField(max_length=100)
     bn_name = models.CharField(max_length=100)
-<<<<<<< HEAD
     ward = models.ManyToManyField(Ward)
-=======
     ward = models.ManyToManyField(Ward )
     latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
     longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
 
->>>>>>> 3a9effa062fd83652cbd8c3efdc1bdb373383faf
 
     def __str__(self):
         return f"{self.en_name} - {self.bn_name}"
